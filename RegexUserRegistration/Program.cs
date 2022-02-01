@@ -20,12 +20,27 @@ namespace RegexUserRegistration
                 Console.ReadLine();
             }
         }
-            //Method to perform UserRegistration
-            public static void UserRegistration1()
+        //Method to perform UserRegistration
+        public static void UserRegistration1()
+        {
+            bool Continue = true;
+            while (Continue)
             {
-                Console.WriteLine("Enter First Name\n");
-                string firstName = Console.ReadLine();
-                Console.WriteLine(UserRegistration.ValidateFirstName(firstName));
+                Console.WriteLine("Choose Option");
+                Console.WriteLine("1.First Name 0.Exit\n");
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 0:
+                        Continue = false;
+                        break;
+                    case 1:
+                        Console.WriteLine("Enter First Name");
+                        string firstName = Console.ReadLine();
+                        Console.WriteLine(UserRegistration.ValidateFirstName(firstName));
+                        break;
+                }
             }
+        }
     }
 }
