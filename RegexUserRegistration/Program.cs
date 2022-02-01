@@ -15,7 +15,7 @@ namespace RegexUserRegistration
         static void Main(string[] args)
         {
             {
-                Console.WriteLine("Welcome to User Registration Program");
+                Console.WriteLine("Welcome to User Registration Program\n");
                 UserRegistration1();
                 Console.ReadLine();
             }
@@ -23,7 +23,7 @@ namespace RegexUserRegistration
             //Method to perform UserRegistration
             public static void UserRegistration1()
             {
-                Console.WriteLine("Enter First Name");
+                Console.WriteLine("Enter First Name\n");
                 string firstName = Console.ReadLine();
                 Console.WriteLine(UserRegistration.ValidateFirstName(firstName));
             }
