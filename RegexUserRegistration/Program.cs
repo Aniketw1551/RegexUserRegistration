@@ -39,6 +39,9 @@ namespace RegexUserRegistration
                         string firstName = Console.ReadLine();
                         Console.WriteLine(UserRegistration.ValidateFirstName(firstName));
                         break;
+                    default:
+                        Console.WriteLine("Please check your option");
+                        break;
                 }
             }
         }
