@@ -14,7 +14,8 @@ namespace RegexUserRegistration
         public const string LAST_NAME = "^[A-Z][a-zA-Z]{2}";
         public const string EMAIL = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}";
         public const string MOBILE_NO = "^([9][1])+[ ]+[6789]{1}[0-9]{9}$";
-        public const string PASSWORD = "^[a-z]{8}";
+        public const string PASSWORD_RULE1 = "^[a-z]{8}";
+        public const string PASSWORD_RULE2 = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
 
         //Method to check First Name
         public void ValidateFName(string fName)
@@ -77,12 +78,27 @@ namespace RegexUserRegistration
             }
         }
         //method to check password
-        public void ValidatePassword(string password)
+        public void ValidatePasswordRule1(string password1)
         {
             //using regex constructor and assigning pattern
-            Regex regex = new Regex(PASSWORD);
+            Regex regex = new Regex(PASSWORD_RULE1);
 
-            if (regex.IsMatch(password))
+            if (regex.IsMatch(password1))
+            {
+                Console.WriteLine("PassWord is matched with pattern");
+            }
+            else
+            {
+                Console.WriteLine("PassWord not matched with pattern");
+            }
+        }
+        //method to check passwrd 
+        public void ValidatePasswordRule2(string password2)
+        {
+            //using regex constructor and assigning pattern
+            Regex regex = new Regex(PASSWORD_RULE2);
+
+            if (regex.IsMatch(password2))
             {
                 Console.WriteLine("PassWord is matched with pattern");
             }
