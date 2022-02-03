@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,24 +9,23 @@ namespace RegexUserRegistration
 {
     public class UserRegistration
     {
-        // Static Variable
-        public static string firstNamePattern = "^[A-Z]{1}[a-z]{2}";
-        public static string lastNamePattern = "^[A-Z]{1}[a-z]{2}";
+        //Pattern for first name
+        public const string FIRST_NAME = "^[A-Z][a-zA-Z]{2}";
+
         //Method to Validate First Name
-        public static string ValidateFirstName(string name)
+        public void ValidateFName(string fName)
         {
-            if (Regex.IsMatch(name, firstNamePattern))
-                return "true";
+            //using regex constructor and assigning pattern
+            Regex regex = new Regex(FIRST_NAME);
+
+            if (regex.IsMatch(fName))
+            {
+                Console.WriteLine("first name is matched with pattern");
+            }
             else
-                return "false";
-        }
-        //Method to Validate Last Name
-        public static string ValidateLastName(string name)
-        {
-            if (Regex.IsMatch(name, lastNamePattern))
-                return "true";
-            else
-                return "false";
+            {
+               Console.WriteLine("first name does not match with pattern");
+            }
         }
     }
 }
