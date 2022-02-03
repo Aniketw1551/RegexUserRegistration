@@ -9,7 +9,7 @@ namespace RegexUserRegistration
     public class Program
     {
         /// <summary>
-        /// Validating first name starting with cap letter and have atlest 3 characters 
+        /// Validating email 
         /// </summary>
         /// <param name="args">The args.</param>
         static void Main(string[] args)
@@ -20,9 +20,12 @@ namespace RegexUserRegistration
                 //Console.WriteLine("Enter valid first name");
                 //string firstname = Console.ReadLine();
                 //userRegistration.ValidateFName(firstname);
-                Console.WriteLine("Enter last name");
-                string lastname = Console.ReadLine();
-                userRegistration.ValidateLName(lastname);
+                //Console.WriteLine("Enter last name");
+                //string lastname = Console.ReadLine();
+                //userRegistration.ValidateLName(lastname);
+                Console.WriteLine("Enter Email id");
+                string email = Console.ReadLine();
+                userRegistration.ValidateEmail(email);
             }
         }
     }
