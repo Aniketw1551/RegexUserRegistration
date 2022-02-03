@@ -19,6 +19,11 @@ namespace RegexUserRegistration
         public const string PASSWORD_RULE3 = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
         public const string PASSWORD_RULE4 = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8,}$";
 
+        //declaring Array
+        public string[] sampleEmail = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc-100@abc.net", "abc.100@abc.com.au",
+                 "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" ,"abc","abc@.com","abc123@gmail.a", "abc123@.com" ,
+                 "abc123@.com.com",".abc@abc.com","abc()*@gmail.com","abc@%*.com","abc.2002@gmail.com","abc.@gmail.com","abc@abc@gmail.com","abc@gmail.com.1a", "abc@gmail.com.aa.au" };
+
         //Method to check First Name
         public void ValidateFName(string fName)
         {
@@ -94,7 +99,7 @@ namespace RegexUserRegistration
                 Console.WriteLine("PassWord not matched with pattern");
             }
         }
-        //method to check passwrd 
+        //method to check password 
         public void ValidatePasswordRule2(string password2)
         {
             //using regex constructor and assigning pattern
@@ -109,7 +114,7 @@ namespace RegexUserRegistration
                 Console.WriteLine("PassWord not matched with pattern");
             }
         }
-        //method to check passwrd 
+        //method to check password 
         public void ValidatePasswordRule3(string password3)
         {
             //using regex constructor and assigning pattern
@@ -124,7 +129,7 @@ namespace RegexUserRegistration
                 Console.WriteLine("PassWord not matched with pattern");
             }
         }
-        //method to check passwrd 
+        //method to check password 
         public void ValidatePasswordRule4(string password4)
         {
             //using regex constructor and assigning pattern
@@ -137,6 +142,25 @@ namespace RegexUserRegistration
             else
             {
                 Console.WriteLine("PassWord not matched with pattern");
+            }
+        }
+        //method to check sample emails are valid or invalid 
+        public void ValidateSampleEmail()
+        {
+            //using regex constructor and assigning pattern
+            Regex regex = new Regex(EMAIL);
+            for (int i = 0; i < sampleEmail.Length; i++)
+            {
+                if (regex.IsMatch(sampleEmail[i]))
+                {
+                    Console.WriteLine(sampleEmail[i] + " is Valid email");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine(sampleEmail[i] + " is Invalid email");
+                    Console.ReadLine();
+                }
             }
         }
     }
