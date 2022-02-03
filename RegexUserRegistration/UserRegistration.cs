@@ -9,13 +9,13 @@ namespace RegexUserRegistration
 {
     public class UserRegistration
     {
-        //Pattern for first name
+        //Declaring Constant Variables for Patterns
         public const string FIRST_NAME = "^[A-Z][a-zA-Z]{2}";
+        public const string LAST_NAME = "^[A-Z][a-zA-Z]{2}";
 
-        //Method to Validate First Name
         public void ValidateFName(string fName)
         {
-            //using regex constructor and assigning pattern
+            //using regex constructor and assigning pattern.
             Regex regex = new Regex(FIRST_NAME);
 
             if (regex.IsMatch(fName))
@@ -24,7 +24,21 @@ namespace RegexUserRegistration
             }
             else
             {
-               Console.WriteLine("first name does not match with pattern");
+                Console.WriteLine("first name does not match with pattern");
+            }
+        }
+        public void ValidateLName(string lName)
+        {
+            //using regex constructor and assigning pattern
+            Regex regex = new Regex(LAST_NAME);
+
+            if (regex.IsMatch(lName))
+            {
+                Console.WriteLine("Last name is matched with pattern");
+            }
+            else
+            {
+                Console.WriteLine("Last name does not match with pattern");
             }
         }
     }
