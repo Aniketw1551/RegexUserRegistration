@@ -16,6 +16,7 @@ namespace RegexUserRegistration
         public const string MOBILE_NO = "^([9][1])+[ ]+[6789]{1}[0-9]{9}$";
         public const string PASSWORD_RULE1 = "^[a-z]{8}";
         public const string PASSWORD_RULE2 = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+        public const string PASSWORD_RULE3 = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
 
         //Method to check First Name
         public void ValidateFName(string fName)
@@ -99,6 +100,21 @@ namespace RegexUserRegistration
             Regex regex = new Regex(PASSWORD_RULE2);
 
             if (regex.IsMatch(password2))
+            {
+                Console.WriteLine("PassWord is matched with pattern");
+            }
+            else
+            {
+                Console.WriteLine("PassWord not matched with pattern");
+            }
+        }
+        //method to check passwrd 
+        public void ValidatePasswordRule3(string password3)
+        {
+            //using regex constructor and assigning pattern
+            Regex regex = new Regex(PASSWORD_RULE3);
+
+            if (regex.IsMatch(password3))
             {
                 Console.WriteLine("PassWord is matched with pattern");
             }
