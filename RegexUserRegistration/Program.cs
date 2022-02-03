@@ -9,7 +9,7 @@ namespace RegexUserRegistration
     public class Program
     {
         /// <summary>
-        /// Validating email 
+        /// Validating mobile number
         /// </summary>
         /// <param name="args">The args.</param>
         static void Main(string[] args)
@@ -23,9 +23,12 @@ namespace RegexUserRegistration
                 //Console.WriteLine("Enter last name");
                 //string lastname = Console.ReadLine();
                 //userRegistration.ValidateLName(lastname);
-                Console.WriteLine("Enter Email id");
-                string email = Console.ReadLine();
-                userRegistration.ValidateEmail(email);
+                //Console.WriteLine("Enter Email id");
+                //string email = Console.ReadLine();
+                //userRegistration.ValidateEmail(email);
+                Console.WriteLine("Enter Mobile no");
+                string monumber = Console.ReadLine();
+                userRegistration.ValidateMobileNumber(monumber);
             }
         }
     }
