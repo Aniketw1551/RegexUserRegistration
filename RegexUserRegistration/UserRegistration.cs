@@ -14,7 +14,7 @@ namespace RegexUserRegistration
 
         public void ValidateFName(string fName)
         {
-            //using regex constructor and assigning pattern
+            //using regex constructor and assigning pattern.
             Regex regex = new Regex(FIRST_NAME);
 
             if (regex.IsMatch(fName))
