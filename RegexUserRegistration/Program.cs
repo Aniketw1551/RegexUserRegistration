@@ -16,8 +16,8 @@ namespace RegexUserRegistration
         {
             {
                 Console.WriteLine("Welcome to User Registration Program\n");
-                UserRegistration1();
-                Console.ReadLine();
+                UserRegisrtation1();
+               UserRegistraton userRegisrtation = new UserRegistraton(); // Declaring object
             }
         }
         //Method to perform UserRegistration
@@ -35,9 +35,9 @@ namespace RegexUserRegistration
                         Continue = false;
                         break;
                     case 1:
-                        Console.WriteLine("Enter First Name");
-                        string firstName = Console.ReadLine();
-                        Console.WriteLine(UserRegistration.ValidateFirstName(firstName));
+                       Console.WriteLine("Enter valid first name");
+                        string frstname = Console.ReadLine();
+                        userRegistraton.ValidateFName(frstname);
                         break;
                     default:
                         Console.WriteLine("Please check your option");
