@@ -9,7 +9,7 @@ namespace RegexUserRegistration
     public class Program
     {
         /// <summary>
-        /// Validating Password Rule 3
+        /// Validating Password Rule 4
         /// </summary>
         /// <param name="args">The args.</param>
         static void Main(string[] args)
@@ -38,9 +38,13 @@ namespace RegexUserRegistration
                 //Console.WriteLine("Enter password with atleast one upper case letter");
                 //string password2 = Console.ReadLine();
                 //userRegistration.ValidatePasswordRule2(password2);
-                Console.WriteLine("Enter password with atleast one upper case letter and one number");
-                string password3 = Console.ReadLine();
-                userRegistration.ValidatePasswordRule3(password3);
+                //Console.WriteLine("Enter password with atleast one upper case letter and one number");
+                //string password3 = Console.ReadLine();
+                //userRegistration.ValidatePasswordRule3(password3);
+                Console.WriteLine("Enter password with atleast one upper case letter,one number and one special character");
+                string password4 = Console.ReadLine();
+                userRegistration.ValidatePasswordRule4(password4);
+
             }
         }
     }
